@@ -1,6 +1,8 @@
 password = ('Python')
-
-if input('enter your password: ') == password:
+x = input('enter your password: ')
+if x == password:
     print('correct password')
+elif len(x) <= 3:
+    print('password is too short')
 else:
     print('wrong password')
