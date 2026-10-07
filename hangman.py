@@ -66,6 +66,7 @@ while active == True:
           break
      if lives==0:
           print('you lose :(')
+          print(wordtoguess)
           active=False
           break
      print(guessedletters)
