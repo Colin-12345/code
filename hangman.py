@@ -43,8 +43,15 @@ r"""
 """
 ]
 lives=6
-wordtoguess=str(input('please input a word for player 2 to guess '))
-wordletters= set(wordtoguess)
+for i in range (0, 1000000000):
+     wordtoguess=str(input('please input a word for player 2 to guess '))
+     wordletters=set(wordtoguess)
+     wordletterslist=list(wordtoguess)
+     if not wordtoguess.isalpha():
+          print('please only use letters')
+          continue
+     break
+print('______________________')
 guessedletters = []
 guessedletters_set = set(guessedletters)
 guessedwordlist=[]
@@ -82,6 +89,9 @@ while active == True:
                print('that letter has already been guessed')
                continue
           else:
+               if not x.isalpha():
+                    print('please input a letter')
+                    continue
                guessedletters.append(x)
                if x in wordletters:
                     break
