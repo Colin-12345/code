@@ -1,6 +1,6 @@
 import random
-x=random.randint(1,10)
-y=random.randint(1,10)
+x=random.randint(1,10) #random A argument
+y=random.randint(1,10) #random B argument
 correct=False
 for i in range (1,5):
     z=int(input(f'{x}*{y}='))
