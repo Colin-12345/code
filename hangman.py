@@ -47,10 +47,16 @@ for i in range (0, 1000000000):
      wordtoguess=str(input('please input a word for player 2 to guess '))
      wordletters=set(wordtoguess)
      wordletterslist=list(wordtoguess)
-     if not wordtoguess.isalpha():
-          print('please only use letters')
-          continue
-     break
+     for c in wordtoguess:
+          if c.isalpha() or c.isspace():
+               active=True
+               continue
+          else:
+               print('please only use letters')
+               active=False
+               break
+     if active==True:
+          break
 print('______________________')
 guessedletters = []
 guessedletters_set = set(guessedletters)
@@ -63,6 +69,8 @@ while active == True:
      for c in wordtoguess:
           if c in guessedletters:
                guessedwordlist.append(c)
+          elif c.isspace():
+               guessedwordlist.append(' ')
           else:
                guessedwordlist.append('_')
      guessedword=''.join(guessedwordlist)
