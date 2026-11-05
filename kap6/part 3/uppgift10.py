@@ -12,4 +12,8 @@ for c in mylist:
         output+= '\n'
     else:
         continue
+if input('do you have a word in mind to count? (y/n)') == 'y':
+    x= input('what is the word you want?')
+    output = x
+    output += f' {mylist.count(x)}'
 print (output)
