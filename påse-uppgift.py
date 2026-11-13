@@ -26,7 +26,7 @@ while active:
     elif choice=='f': #searches for an item in the bag
         search=input('what do you want to search for? ')
         if search in påse:
-            print(f'you rummage around and find {search}')
+            print(f"you rummage around and find {påse.count(search)} {search}('s)")
         else:
             print(f'try as you might, you just cant find {search}')
 
