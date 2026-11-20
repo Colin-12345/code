@@ -1,13 +1,14 @@
 import random
 import time
+
 def show_status(P_hp, M_hp):
-    print(f"Player: {P_hp} | Monster hp: {M_hp} \n")
+    print(f"Player: {P_hp} hp | Monster hp: {M_hp} hp\n")
 
 def show_menu():
     print("""options:
 1. Sword slash  (15-20 damage, 100% accuracy)
-2. fireball     (25-35 damage,  50% accuracy)
-3. Heal         (15-25 heal)""")
+2. fireball     (25-50 damage,  66% accuracy)
+3. Heal         (15-30 heal)""")
     
 def player_turn(choice):
     damage=0
@@ -20,14 +21,14 @@ def player_turn(choice):
             time.sleep(0.5)
             print('.')
         time.sleep(0.5)
-        accuracy=random.randint(1, 2)
+        accuracy=random.randint(1, 3)
         if accuracy==1:
             print('Your magic misses, bummer.')
-        elif accuracy==2:
-            damage=25+random.randint(0,10)
+        elif accuracy>=2:
+            damage=25+random.randint(0,25)
             print(f'Direct hit! You deal {damage} damage.')
     elif choice == 3:
-        damage=-15-random.randint(0, 10)
+        damage=-15-random.randint(0, 15)
         print('You channel your magic to heal, ')
         time.sleep(0.5)
         print(f'You heal {damage*-1} health')
