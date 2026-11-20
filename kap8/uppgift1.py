@@ -1,0 +1,5 @@
+def avdelare():
+    print("""
+--------------------
+""")
+avdelare()
